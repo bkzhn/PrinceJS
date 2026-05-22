@@ -304,7 +304,7 @@ function transformLevel(spec) {
       const n = j * format.size.width + i;
       format.room[n] = {};
       format.room[n].id = spec.layout[n];
-      let next = 1;
+      let next;
       let eventID;
       if (spec.layout[n] !== -1) {
         // Copy tiles

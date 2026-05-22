@@ -119,9 +119,9 @@ PrinceJS.Level.prototype = {
     if (!this.rooms[room]) {
       return this.dummyWall;
     }
-    let newRoom = room;
+    let newRoom;
     let newX = x;
-    let newY = y;
+    let newY;
 
     let result = this.getRoomX(room, x);
     if (result.room > 0) {

@@ -111,7 +111,6 @@ PrinceJS.LevelBuilder.prototype = {
         tile = new PrinceJS.Tile.Base(this.game, t.element, t.modifier, this.type);
 
         tileSeed = tileNumber + id;
-        wallType = "";
 
         if (this.getTileAt(x - 1, y, id) === PrinceJS.Level.TILE_WALL) {
           wallType = "W";
@@ -297,11 +296,11 @@ PrinceJS.LevelBuilder.prototype = {
       x -= 10;
     }
     if (y < 0) {
-      room = this.getRoomId(room.x, room.y - 1);
+      id = this.getRoomId(room.x, room.y - 1);
       y += 3;
     }
     if (y > 2) {
-      room = this.getRoomId(room.x, room.y + 1);
+      id = this.getRoomId(room.x, room.y + 1);
       y -= 3;
     }
 
